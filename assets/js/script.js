@@ -10,7 +10,7 @@ console.log(currentHour);
 var getCurrentHourInt = parseInt(currentHour);
 console.log(getCurrentHourInt);
 
-
+// a for loop that colors all the timeblocks depending on hour of day
 for (let i = 9; i <= 17; i++) {
       if (i < getCurrentHourInt) {
             $("#" + i).addClass("past");
@@ -23,23 +23,23 @@ for (let i = 9; i <= 17; i++) {
       }
 }
 
+// result of clicking save button on each line
+function saveTasks(event) {
+      event.preventDefault();
 
+      var saveBtn = $(event.target);
+      var task = saveBtn.siblings("textarea").val();
+      console.log(task);
+      var timeId = saveBtn.siblings("textarea").attr("id");
+      console.log(timeId);
 
-// GIVEN I am using a daily planner to create a schedule
-// WHEN I open the planner
-// THEN the current day is displayed at the top of the calendar
+      localStorage.setItem(timeId, task);
+}
 
-// WHEN I scroll down
-// THEN I am presented with timeblocks for standard business hours
+// calls the div holding the entire planner
+var container = $(".container");
 
-// WHEN I view the timeblocks for that day
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-// need to compare current hour to the hour somehow designated in textarea?
-// if currenthour > timeblockhour, then textarea addclass past
-// how do i make the textareas each have their own hour? ids? dataset?
-
-// WHEN I click into a timeblock
-// THEN I can enter an event
+container.on("click", ".saveBtn", saveTasks)
 
 // WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage
