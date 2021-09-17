@@ -36,6 +36,15 @@ function saveTasks(event) {
       localStorage.setItem(timeId, task);
 }
 
+function getSavedTasks() {
+      for (let i = 9; i <= 17; i++) {
+            localStorage.getItem(i);
+            $("#" + i).val(localStorage.getItem(i));
+      }
+}
+
+getSavedTasks();
+
 // calls the div holding the entire planner
 var container = $(".container");
 
