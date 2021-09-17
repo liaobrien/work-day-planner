@@ -1,5 +1,5 @@
 var currentDay = moment().format("dddd MMMM Do");
-$("#currentDay").text(currentDay);
+$("#currentDay").text("Today is " + currentDay);
 
 
 // call current hour of the day
