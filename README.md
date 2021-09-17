@@ -16,13 +16,13 @@ To run a copy of this app on your local machine, first clone the repository:
 HTTPS:
 
 ```
-$ git clone https://github.com/LauraCole1900/jQueryWorkdayScheduler.git
+$ git clone https://github.com/liaobrien/work-day-planner.git
 ```
 
 SSH:
 
 ```
-$ git clone git@github.com:LauraCole1900/jQueryWorkdayScheduler.git
+$ git clone git@github.com:liaobrien/work-day-planner.git
 ```
 
 Then cd into the directory into which you cloned, right-click on index.html, and choose "Open in default browser."
